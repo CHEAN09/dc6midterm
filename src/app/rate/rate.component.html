@@ -1,0 +1,30 @@
+<div class="body">
+    <h1>Rate the Anime</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../assets/img/one piece.png" class="img1" alt="..." />
+                <h3>One Piece</h3>
+                <p class="ep">995 Episodes</p>
+            </div>
+            <div class="col-md-9">
+                <p>
+                    One of the most popular anime's in the world, One Piece, written by Eiichiro Oda, has taken the world by storm, with new plot lines each episode! One Piece, starring Monkey D. Luffy, a young man with the dream of becoming the Pirate King, fights villains
+                    with many different powers, in order to become the strongest!
+                </p>
+                <p>
+                    One Piece is the name the world gave to the treasure found by the Pirate King Gol D. Roger. It is a mysterious treasure that once belonged to Joy Boy during the Void Century. The treasure is said to be of unimaginable value, and is currently located on
+                    the final island of the Grand Line: Laugh Tale.
+                </p>
+                <hr>
+                <ngb-rating [max]="5" [(rate)]="currentRate" class="rate">
+                    <ng-template let-fill="fill" let-index="index">
+                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                    </ng-template>
+                </ngb-rating>
+
+                <pre class="rateNum">Rate: <b>{{currentRate}} of 5</b></pre>
+            </div>
+        </div>
+    </div>
+</div>
